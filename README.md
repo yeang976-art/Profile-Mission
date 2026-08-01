@@ -23,3 +23,8 @@ Set the instance type to small and create a key pair with the following settings
 In the network settings, set the subnet to public1 and enable automatic public IP assignment.
 
 <img width="1392" height="882" alt="스크린샷 2026-08-01 오후 5 56 26" src="https://github.com/user-attachments/assets/265dfaf7-df3b-4a2d-bed5-50a264e51120" />
+
+Result
+
+<img width="1392" height="882" alt="스크린샷 2026-08-01 오후 6 29 34" src="https://github.com/user-attachments/assets/4250ec75-751a-45d4-8c15-a3e998bb1477" />
+
