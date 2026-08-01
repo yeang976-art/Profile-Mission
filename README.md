@@ -6,6 +6,8 @@ Set the budget to $100 and configure it so that an email is sent when the actual
 
 <img width="1392" height="882" alt="스크린샷 2026-08-01 오후 4 32 38" src="https://github.com/user-attachments/assets/f92f5baa-f5ed-468f-a77e-80324c566360" />
 
+Result
+
 <img width="1392" height="882" alt="스크린샷 2026-08-01 오후 4 34 38" src="https://github.com/user-attachments/assets/82e800dc-5a6c-4069-887c-4ab235dce446" />
 
 ---
@@ -26,5 +28,5 @@ In the network settings, set the subnet to public1 and enable automatic public I
 
 Result
 
-<img width="1392" height="882" alt="스크린샷 2026-08-01 오후 6 29 34" src="https://github.com/user-attachments/assets/4250ec75-751a-45d4-8c15-a3e998bb1477" />
+<img width="1392" height="882" alt="스크린샷 2026-08-01 오후 6 31 53" src="https://github.com/user-attachments/assets/9a9bd312-48f4-474d-be9f-d672afa88238" />
 
