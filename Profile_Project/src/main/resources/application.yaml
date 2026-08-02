@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: Profile_Project
+
+  profiles:
+    active: local, prod
+
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
