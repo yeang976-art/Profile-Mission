@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/health
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+  application:
+    name: Profile_Project
+
+  config:
+    import: aws-parameterstore:/camp-health-app/prod/
+
+
+management:
+  endpoint:
+    health:
+      show-details: never
+
+  info:
+    env:
+      enabled: true
+
+
+info:
+  app:
+    message: ${APP_MESSAGE}
+
+
+logging:
+  level:
+    root: ERROR
