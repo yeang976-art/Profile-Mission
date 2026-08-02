@@ -22,7 +22,7 @@ public class PersonalInfoService {
         return CreatePersonalInfoResponse.from(personalInfo);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public GetPersonalInfoResponse getInfo(Long id) {
         PersonalInfo personalInfo = personalInfoRepository.findById(id).orElseThrow();
 

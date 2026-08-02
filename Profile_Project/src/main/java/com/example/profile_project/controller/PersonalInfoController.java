@@ -4,6 +4,7 @@ import com.example.profile_project.dto.CreatePersonalInfoRequest;
 import com.example.profile_project.dto.CreatePersonalInfoResponse;
 import com.example.profile_project.dto.GetPersonalInfoResponse;
 import com.example.profile_project.service.PersonalInfoService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +22,7 @@ public class PersonalInfoController {
     private final PersonalInfoService personalInfoService;
 
     @PostMapping
-    public ResponseEntity<CreatePersonalInfoResponse> register(@RequestBody CreatePersonalInfoRequest request) {
+    public ResponseEntity<CreatePersonalInfoResponse> register(@Valid @RequestBody CreatePersonalInfoRequest request) {
         return ResponseEntity.status(HttpStatus.CREATED).body(personalInfoService.saveInfo(request));
     }
 
