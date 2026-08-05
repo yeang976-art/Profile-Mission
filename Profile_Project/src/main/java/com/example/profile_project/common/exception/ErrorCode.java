@@ -9,10 +9,10 @@ public enum ErrorCode {
     ;
 
     private final HttpStatus httpStatus;
-    private final String s;
+    private final String message;
 
-    ErrorCode(HttpStatus httpStatus, String s) {
+    ErrorCode(HttpStatus httpStatus, String message) {
         this.httpStatus = httpStatus;
-        this.s = s;
+        this.message = message;
     }
 }

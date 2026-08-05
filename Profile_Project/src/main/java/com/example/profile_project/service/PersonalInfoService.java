@@ -1,11 +1,14 @@
 package com.example.profile_project.service;
 
+import com.example.profile_project.common.exception.ErrorCode;
+import com.example.profile_project.common.exception.ServiceException;
 import com.example.profile_project.dto.CreatePersonalInfoRequest;
 import com.example.profile_project.dto.CreatePersonalInfoResponse;
 import com.example.profile_project.dto.GetPersonalInfoResponse;
 import com.example.profile_project.entity.PersonalInfo;
 import com.example.profile_project.repository.PersonalInfoRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -24,7 +27,8 @@ public class PersonalInfoService {
 
     @Transactional(readOnly = true)
     public GetPersonalInfoResponse getInfo(Long id) {
-        PersonalInfo personalInfo = personalInfoRepository.findById(id).orElseThrow();
+        PersonalInfo personalInfo = personalInfoRepository.findById(id).orElseThrow(
+                () -> new ServiceException(ErrorCode.PERSON_INFO_NOT_FOUND));
 
         return GetPersonalInfoResponse.from(personalInfo);
     }
