@@ -22,3 +22,15 @@ Result
 
 <img width="1096" height="171" alt="스크린샷 2026-08-06 오후 2 16 56" src="https://github.com/user-attachments/assets/ddd4ffa6-2ab9-4148-8929-e88e72e5f16f" />
 
+---
+
+## Separating DB and Secure Connection
+
+Allowed inbound rules
+
+<img width="1276" height="411" alt="스크린샷 2026-08-06 오후 4 17 58" src="https://github.com/user-attachments/assets/58e65735-545b-486f-96cd-6365ae75e592" />
+
+RDS DB connection successful
+
+<img width="2184" height="1698" alt="image" src="https://github.com/user-attachments/assets/7812827f-99c9-402b-a620-18f4aba50f1a" />
+
