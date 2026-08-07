@@ -34,3 +34,10 @@ RDS DB connection successful
 
 <img width="2184" height="1698" alt="image" src="https://github.com/user-attachments/assets/7812827f-99c9-402b-a620-18f4aba50f1a" />
 
+INFORMATION parameter attributes
+
+<img width="1392" height="882" alt="스크린샷 2026-08-08 오전 1 34 03" src="https://github.com/user-attachments/assets/af9daf6f-1a4d-4609-80f1-59c1930880d4" />
+
+Result
+
+망함
