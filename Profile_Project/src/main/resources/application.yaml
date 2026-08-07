@@ -2,17 +2,9 @@ spring:
   application:
     name: Profile_Project
 
+  # 프로필을 따로 지정하지 않은 로컬 실행의 기본값
   profiles:
-    active: local, prod
-
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQLDialect
-
+    default: local
 
 server:
   port: 8080
@@ -22,3 +14,11 @@ management:
     web:
       exposure:
         include: health,info
+
+  endpoint:
+    health:
+      show-details: never
+
+  info:
+    env:
+      enabled: true

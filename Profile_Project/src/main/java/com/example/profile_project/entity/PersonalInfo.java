@@ -14,7 +14,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table
+@Table(name = "profiles")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class PersonalInfo extends BaseEntity {
