@@ -22,7 +22,10 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(ServiceException.class)
-    public ResponseEntity<String> serviceException() {
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("존재하지 않는 엔티티");
+    public ResponseEntity<String> serviceException(ServiceException ex) {
+
+        ErrorCode errorCode = ex.getCode();
+
+        return ResponseEntity.status(errorCode.getHttpStatus()).body(errorCode.getMessage());
     }
 }

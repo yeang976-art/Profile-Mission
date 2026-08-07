@@ -18,6 +18,15 @@ spring:
       enabled: true
       path: /h2-console
 
+# [주의] 이걸 true로 하면 로컬 실행 안됩니다
+  cloud:
+    aws:
+      parameterstore:
+        enabled: false
+      s3:
+        bucket: project-info-yeang976-files
+
+
 management:
   endpoints:
     web:

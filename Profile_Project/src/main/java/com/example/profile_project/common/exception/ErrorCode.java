@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 @Getter
 public enum ErrorCode {
     PERSON_INFO_NOT_FOUND(HttpStatus.NOT_FOUND, "인물 정보를 찾을 수 없습니다."),
+    UPLOAD_FILE_FAIL(HttpStatus.INTERNAL_SERVER_ERROR, "💀 파일 업로드 실패 💀")
     ;
 
     private final HttpStatus httpStatus;
