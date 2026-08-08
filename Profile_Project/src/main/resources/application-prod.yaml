@@ -19,17 +19,23 @@ spring:
     aws:
       region:
         static: ap-northeast-2
+      s3:
+        bucket: project-info-yeang976-files
 
 
 management:
   endpoint:
-    health:
-      show-details: always
+    web:
+      exposure:
+        include: info, health
 
   info:
     env:
       enabled: true
 
+info:
+  database:
+    information: ${INFOMATION}
 
 logging:
   level:

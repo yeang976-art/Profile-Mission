@@ -34,10 +34,17 @@ public class PersonalInfo extends BaseEntity {
     @Column(nullable = false, length = 4)
     private MBTI mbti;
 
+    @Column(nullable = false)
+    private String s3ImageKey;
+
     public PersonalInfo(String name, Double age, Double height, MBTI mbti) {
         this.name = name;
         this.age = age;
         this.height = height;
         this.mbti = mbti;
+    }
+
+    public void saveImage(String s3Key) {
+        this.s3ImageKey = s3Key;
     }
 }

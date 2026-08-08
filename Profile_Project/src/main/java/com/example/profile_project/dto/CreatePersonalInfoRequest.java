@@ -15,7 +15,6 @@ public record CreatePersonalInfoRequest(
         @Max(value = 270, message = "270살 초과면 회원가입이 아니라 국가문화유산 등록하고 역사 교과서 검수하러 가셔야 합니다 📜")
         Double age,
 
-        @NotNull(message = "키 누락한 거 보니 100% 성장판 닫힌 키갤러네 ㅋㅋ 서버가 자 들고 쫓아가기 전에 아르기닌이나 마저 드셈 💊")
         @PositiveOrZero(message = "키가 음수? 발이 지하에 묻힌 게 아니라 일리자로프 사지연장술 받다가 부작용 와서 주저앉으신 듯 🦴")
         Double height,
 

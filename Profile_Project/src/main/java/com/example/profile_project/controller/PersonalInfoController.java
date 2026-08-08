@@ -2,6 +2,8 @@ package com.example.profile_project.controller;
 
 import com.example.profile_project.dto.CreatePersonalInfoRequest;
 import com.example.profile_project.dto.CreatePersonalInfoResponse;
+import com.example.profile_project.dto.FileDownloadUrlResponse;
+import com.example.profile_project.dto.FileUploadResponse;
 import com.example.profile_project.dto.GetPersonalInfoResponse;
 import com.example.profile_project.service.PersonalInfoService;
 import jakarta.validation.Valid;
@@ -12,8 +14,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequiredArgsConstructor
@@ -29,5 +33,17 @@ public class PersonalInfoController {
     @GetMapping("/{id}")
     public ResponseEntity<GetPersonalInfoResponse> getId(@PathVariable Long id) {
         return ResponseEntity.ok(personalInfoService.getInfo(id));
+    }
+
+    @PostMapping("{id}/profile-image")
+    public ResponseEntity<FileUploadResponse> upload(
+            @PathVariable Long id, @RequestParam("file") MultipartFile file) {
+        return ResponseEntity.ok(personalInfoService.saveImage(id, file));
+    }
+
+    // Presigned URL
+    @GetMapping("{id}/profile-image")
+    public ResponseEntity<FileDownloadUrlResponse> getDownloadUrl(@PathVariable Long id) {
+        return ResponseEntity.ok(personalInfoService.downloadUrl(id));
     }
 }
