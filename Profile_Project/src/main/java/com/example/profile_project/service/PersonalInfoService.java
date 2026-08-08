@@ -12,7 +12,6 @@ import com.example.profile_project.repository.PersonalInfoRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -53,7 +52,7 @@ public class PersonalInfoService {
         return new FileUploadResponse(key);
     }
 
-    // 특정 프로필 이미지의 URL을 Presigned로 다운로드
+    // 특정 프로필 이미지의 URL을 Presigned로 다운로정
     @Transactional(readOnly = true)
     public FileDownloadUrlResponse downloadUrl(Long id) {
         PersonalInfo personalInfo = checkId(id);
